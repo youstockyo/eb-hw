@@ -1,0 +1,190 @@
+header {
+	padding-top: 10.1rem;
+	height: 89.2rem;
+
+	background: no-repeat top center/cover url("../images/header-bg.jpg") fixed;
+}
+
+/***************
+	Intro
+****************/
+.section-intro {
+	// margin-top: -5.6rem;
+	color: $text-grey;
+
+	.heading-wrapper {
+		background: $body-light-grey;
+		@include row();
+	}
+
+	.heading-intro {
+		@include span-columns(10);
+		@include pad(3.5rem 0 4.7rem 7.4rem);
+	}
+
+	.copy-wrapper {
+		@include row();
+	}
+
+	.copy {
+		@include span-columns(9);
+		@include pad(2.8rem 0 0 7.7rem);
+
+		p {
+			margin-top: 3rem;
+		}
+	}
+	
+	.title {
+		font-weight: 600;
+	}
+	
+	.last {
+		margin-bottom: 18.1rem;
+	}
+}
+
+/***************
+	Numbers
+****************/
+.container-numbers {
+	color: $white;
+	background: $body-blue-grey;
+	@include pad(0 0 15.5rem 0);
+
+	.numbers-graphs-wrapper {
+		@include span-columns(6);
+	}
+
+	.numbers-copy-wrapper {
+		@include span-columns(6);
+	}
+
+	.numbers-copy {
+		@include span-columns(4 of 6);
+		@include shift(1);
+
+		h2 {
+			margin: 9.3rem 0 1.6rem 0;
+		}
+
+		p {
+			margin-bottom: 3.2rem;
+		}
+
+		.rule {
+			border-color: $white;
+		}
+
+	}
+}
+
+/***************
+	Events
+****************/
+.container-events {
+	background: $bg-grey;
+	color: $body-blue-grey;
+
+	.section-events {
+		@include pad(0 0 19.6rem 0);
+	}
+
+	.col1 {
+		@include span-columns(6);
+		background: no-repeat top center/contain url("../images/card-1.jpg");
+
+		.content {
+			@include span-columns(5 of 6);
+			@include shift(1);
+			@include pad(56.6rem 0 0 0);
+		}
+
+		h2 {
+			margin-bottom: 3.1rem;
+			line-height: 5.2rem;
+		}
+
+		p {
+			max-width: 41rem;
+		}
+
+		button {
+			margin-top: 4.5rem;
+		}
+
+		.rule {
+			border-color: $body-blue-grey;
+		}
+	}
+
+	.col2 {
+		@include span-columns(3);
+	}
+
+	.col3 {
+		@include span-columns(3);
+		@include omega;
+	}
+
+	.card-surf {
+		background: no-repeat top center url("../images/card-2.jpg");
+	}
+
+	.card-summer {
+		background: no-repeat top center url("../images/card-3.jpg");
+	}
+
+	.card-app {
+		color: $body-grey;
+		text-transform: uppercase;
+		background: no-repeat center 4.5rem url("../images/card-4-icon.png") #33363e;
+		height: 29.2rem;
+
+		p {
+			width: 15rem;
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+			font-weight: 600;
+			margin: 0 auto;
+			text-align: center;
+			padding-top: 22.6rem;
+		}
+	}
+
+	.card-serious {
+		height: 50.6rem;
+
+		background: no-repeat center 28.9rem url("../images/card-5-icon.png") red;
+
+		p {
+			font-size: 4.8rem;
+			font-weight: 100;
+			line-height: 5.2rem;
+			text-align: center;
+			padding-top: 7.8rem;
+		}
+	}
+}
+
+/***************
+	Footer
+****************/
+footer {
+	.footer-content-wrapper {
+		@include outer-container(128rem);
+		@include pad(13.3rem 0 17rem 0);
+	}
+
+	.footer-content-logo {
+		@include span-columns(4);
+		@include shift(4);
+		height: 8rem;
+		background: no-repeat center 4.5rem url("../images/eventbrite_wordmark_white.png");
+	}
+
+	p {
+		font-size: 1.8rem;
+		text-align: center;
+	}
+}

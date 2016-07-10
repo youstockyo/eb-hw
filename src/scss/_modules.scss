@@ -1,0 +1,88 @@
+/***************
+	Navigation
+****************/
+nav {
+	height: 10.1rem;
+	top: 0;
+	z-index: 100;
+	margin-bottom: -10.1rem;
+	width: 100%;
+	position: fixed;
+
+	background: $white;
+
+	border-bottom: 0.1rem solid $nav-border;
+
+	&.sticky {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		float: right;
+
+		list-style: none;
+		text-transform: uppercase;
+	}
+
+	li {
+		display: inline-block;
+		padding: 3.9rem 3rem 3.8rem 3rem;
+
+		font-size: 2rem;
+		font-weight: 300;
+		letter-spacing: 0.25rem;
+
+		color: $nav-grey;
+	}
+
+	.create {
+		padding-left: 5rem;
+		padding-right: 5rem;
+		background: $nav-blue;
+		color: $white;
+	}
+}
+
+/***************
+	Rule
+****************/
+.rule {
+	width: 7.9rem;
+	border-top: 2px solid #000;
+	margin-bottom: 3.6rem;
+}
+
+/***************
+	Cards
+****************/
+.card-activity {
+	background: $white;
+	@include pad(0 0 1.7rem 0);
+	margin-bottom: 3.7rem;
+
+	p {
+		padding-left: 2rem;
+	}
+}
+
+.card-heading {
+	font-size: 3.2rem;
+	font-weight: 300;
+	@include pad(1.9rem 0 0.2rem 0);
+}
+
+.card-category {
+	font-size: 1.4rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $body-grey;
+}
+
+.card-image {
+	height: 19.7rem;
+	background-size: cover;
+}
