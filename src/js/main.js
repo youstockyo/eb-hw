@@ -37,7 +37,6 @@ function check_view() {
 $window.on('scroll resize', check_view);
 $window.trigger('scroll');
 
-
 });
 
 

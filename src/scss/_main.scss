@@ -6,14 +6,17 @@
 	width: 19.8rem;
 	height: 3.2rem;
 	float: left;
-	// @include centerme(false, true);
 	position: absolute;
 	top: 46%;
 	left: 5.9rem;
 	transform: translate(0, -46%);
 
 	@include media($sm) {
-		float: none;
+		width: 100%;
+		transform: translate(0, 0);
+		position: static;
+		margin-top: 1rem;
+		background-position: center;
 	}
 }
 
@@ -44,13 +47,10 @@ header {
 		@include pad(3.5rem 0 4.7rem 7.4rem);
 
 		@include media($md) {
-			@include span-columns(12);
+			@include span-columns(11);
+			@include shift(1);
+			padding-left: 0;
 		}
-
-		@include media($sm) {
-			@include span-columns(12);
-		}
-
 	}
 
 	.copy-wrapper {
@@ -63,6 +63,8 @@ header {
 
 		@include media($md) {
 			@include span-columns(10);
+			@include shift(1);
+			padding-left: 0;
 		}
 
 		p {

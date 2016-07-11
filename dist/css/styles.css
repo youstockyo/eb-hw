@@ -433,7 +433,11 @@ section {
   transform: translate(0, -46%); }
   @media screen and (max-width: 755px) {
     .nav-logo {
-      float: none; } }
+      width: 100%;
+      transform: translate(0, 0);
+      position: static;
+      margin-top: 1rem;
+      background-position: center; } }
 
 /***************
 	Header
@@ -469,15 +473,9 @@ header {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 100%; }
-        .section-intro .heading-intro:last-child {
-          margin-right: 0; } }
-    @media screen and (max-width: 755px) {
-      .section-intro .heading-intro {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 100%; }
+        width: 91.4702%;
+        margin-left: 8.5298%;
+        padding-left: 0; }
         .section-intro .heading-intro:last-child {
           margin-right: 0; } }
   .section-intro .copy-wrapper {
@@ -499,7 +497,9 @@ header {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 82.94039%; }
+        width: 82.94039%;
+        margin-left: 8.5298%;
+        padding-left: 0; }
         .section-intro .copy:last-child {
           margin-right: 0; } }
     .section-intro .copy p {
@@ -882,6 +882,9 @@ nav {
   position: fixed;
   background: #fff;
   border-bottom: 0.1rem solid #b2b2b2; }
+  @media screen and (max-width: 755px) {
+    nav {
+      height: 11.7rem; } }
   nav.sticky {
     position: fixed;
     top: 0;
@@ -892,6 +895,12 @@ nav {
     float: right;
     list-style: none;
     text-transform: uppercase; }
+    @media screen and (max-width: 755px) {
+      nav ul {
+        float: left;
+        overflow: hidden;
+        margin: 2rem auto 0 auto;
+        width: 98%; } }
   nav li {
     display: inline-block;
     padding: 3.9rem 3rem 3.8rem 3rem;
@@ -899,11 +908,27 @@ nav {
     font-weight: 300;
     letter-spacing: 0.25rem;
     color: #3d3f41; }
+    @media screen and (max-width: 755px) {
+      nav li {
+        width: 33.333%;
+        width: calc(100%/3);
+        padding: 1.2rem 0 1.2rem 0;
+        float: left;
+        text-align: center;
+        display: block;
+        background: #fff; } }
   nav .create {
     padding-left: 5rem;
     padding-right: 5rem;
     background: #39c2c8;
     color: #fff; }
+    @media screen and (max-width: 755px) {
+      nav .create {
+        padding: 1.2rem 0 1.2rem 0;
+        border-radius: 1rem; } }
+  @media screen and (min-width: 755px) {
+    nav #menu {
+      display: none; } }
 
 /***************
 	Rule

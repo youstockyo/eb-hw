@@ -13,6 +13,10 @@ nav {
 
 	border-bottom: 0.1rem solid $nav-border;
 
+	@include media($sm) {
+		height: 11.7rem;
+	}
+
 	&.sticky {
 		position: fixed;
 		top: 0;
@@ -26,6 +30,13 @@ nav {
 
 		list-style: none;
 		text-transform: uppercase;
+
+		@include media($sm) {
+			float: left;
+			overflow: hidden;
+			margin: 2rem auto 0 auto;
+			width: 98%;
+		}
 	}
 
 	li {
@@ -37,6 +48,17 @@ nav {
 		letter-spacing: 0.25rem;
 
 		color: $nav-grey;
+
+		@include media($sm) {
+			width: 33.333%;
+			width: calc(100%/3);
+			// width: 100%;
+			@include pad(1.2rem 0 1.2rem 0);
+			float: left;
+			text-align: center;
+			display: block;
+			background: $white;
+		}
 	}
 
 	.create {
@@ -44,7 +66,22 @@ nav {
 		padding-right: 5rem;
 		background: $nav-blue;
 		color: $white;
+
+		@include media($sm) {
+			@include pad(1.2rem 0 1.2rem 0);
+			// background: $white;
+			// color: $nav-blue;
+			// font-weight: 600;
+			border-radius: 1rem;
+		}
 	}
+	
+	@include media(min-width 755px) {
+		#menu {
+			display: none;
+		}
+	}
+
 }
 
 /***************
