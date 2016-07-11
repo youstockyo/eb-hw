@@ -8,3 +8,12 @@ $visual-grid-index: front !global;
 
 $max-width: 128rem;
 $grid-columns: 12;
+
+// Breakpoint
+$sm_val: 755px;
+$md_val: 1080px;
+$lg_val: 1081px;
+
+$sm: new-breakpoint(max-width $sm_val);
+$md: new-breakpoint(max-width $md_val);
+$lg: new-breakpoint(min-width $lg_val);

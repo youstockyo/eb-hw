@@ -7,7 +7,7 @@
 </head>
 <body>
 	<nav class="nav">
-		<div class="nav-logo"></div>
+		<a href="http://www.eventbrite.com"><div class="nav-logo"></div></a>
 		<ul>
 			<li>Sign In</li>
 			<li>Help</li>
@@ -34,13 +34,39 @@
 
 	<div class="container-numbers">
 		<section class="section-numbers">
-			<div class="numbers-graphs-wrapper">
-				&nbsp;
+			<div class="numbers-charts-wrapper">
+				<div class="chart chart1">
+					<p class="chart-number">$3bn</p>
+					<p class="chart-category">Sales</p>
+				</div>
+				<div class="chart chart2">
+					<p class="chart-number">200m</p>
+					<p class="chart-category">Tickets</p>
+				</div>
+				<div class="chart chart3">
+					<p class="chart-number">165k</p>
+					<p class="chart-category">Shows</p>
+				</div>
+				
 			</div>
 			<div class="numbers-copy-wrapper">
 				<div class="numbers-copy">
 					<h2>By the numbers</h2>
 					<div class="rule"></div>
+					<div class="numbers-charts-wrapper-md">
+						<div class="chart-md chart1-md">
+							<p class="chart-number">$3bn</p>
+							<p class="chart-category">Sales</p>
+						</div>
+						<div class="chart-md chart2-md">
+							<p class="chart-number">200m</p>
+							<p class="chart-category">Tickets</p>
+						</div>
+						<div class="chart-md chart3-md">
+							<p class="chart-number">165k</p>
+							<p class="chart-category">Shows</p>
+						</div>
+					</div>
 					<p>Vitae autem degendae ratio maxime quidem illis placuit quieta. Cupiditates non Epicuri divisione finiebat, sed sua satietate. Facile est hoc cernere in primis puerorum aetatulis. </p>
 					<p>Quae cum magnifice primo dici viderentur, considerata minus probabantur. Scaevola tribunus plebis ferret ad plebem vellentne de ea re quaeri. Duae sunt enim res quoque, ne tu verba solum putes.</p>
 				</div>
@@ -60,28 +86,39 @@
 			</div>
 			<div class="col2">
 				<a href="#">
-					<div class="card-activity">
+					<div class="card-activity animate-card scroll-card" data-scroll-speed="6" id="card1">
 						<div class="card-image card-surf"></div>
 						<p class="card-heading">Surf's Up!</p>
 						<p class="card-category">Sports &amp; Adventure</p>
 					</div>
 				</a>
 				<a href="#">
-					<div class="card-app">
+					<div class="card-activity animate-card scroll-card show-sm" data-scroll-speed="7" id="card3">
+						<div class="card-image card-summer"></div>
+						<p class="card-heading">Summer of fun</p>
+						<p class="card-category">Entertainment</p>
+					</div>
+				</a>
+				<a href="#">
+					<div class="card-app animate-card scroll-card" data-scroll-speed="8" id="card2">
 						<p>Download<br>the App Today!</p>
 					</div>
 				</a>
 			</div>
 			<div class="col3">
-				<div class="card-activity">
-					<div class="card-image card-summer"></div>
-					<p class="card-heading">Summer of fun</p>
-					<p class="card-category">Entertainment</p>
-				</div>
-				<div class="card-serious">
-					<p>We take events seriously</p>
-					<img src="images/card-5-icon.png" alt="">
-				</div>
+				<a href="#">
+					<div class="card-activity animate-card scroll-card hide-sm" data-scroll-speed="7" id="card3">
+						<div class="card-image card-summer"></div>
+						<p class="card-heading">Summer of fun</p>
+						<p class="card-category">Entertainment</p>
+					</div>
+				</a>
+				<a href="#">
+					<div class="card-serious animate-card scroll-card" data-scroll-speed="9" id="card4">
+						<p>We take events seriously</p>
+						<img src="images/card-5-icon.png" alt="">
+					</div>
+				</a>
 			</div>
 		</section>
 	</div>
@@ -93,5 +130,7 @@
 			</div>
 		</div>
 	</footer>
+
+	<script src="scripts/main.js"></script>
 </body>
 </html>

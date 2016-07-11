@@ -11,6 +11,10 @@
 	top: 46%;
 	left: 5.9rem;
 	transform: translate(0, -46%);
+
+	@include media($sm) {
+		float: none;
+	}
 }
 
 /***************
@@ -38,6 +42,15 @@ header {
 	.heading-intro {
 		@include span-columns(10);
 		@include pad(3.5rem 0 4.7rem 7.4rem);
+
+		@include media($md) {
+			@include span-columns(12);
+		}
+
+		@include media($sm) {
+			@include span-columns(12);
+		}
+
 	}
 
 	.copy-wrapper {
@@ -47,6 +60,10 @@ header {
 	.copy {
 		@include span-columns(9);
 		@include pad(2.8rem 0 0 7.7rem);
+
+		@include media($md) {
+			@include span-columns(10);
+		}
 
 		p {
 			margin-top: 3rem;
@@ -68,19 +85,89 @@ header {
 .container-numbers {
 	color: $white;
 	background: $body-blue-grey;
-	@include pad(0 0 15.5rem 0);
+	@include pad(0 0 24.5rem 0);
 
-	.numbers-graphs-wrapper {
+	@include media($sm) {
+		@include pad(0 0 14.5rem 0);
+	}
+
+	.numbers-charts-wrapper {
 		@include span-columns(6);
+		position: relative;
+		@include media($md) {
+			display: none;
+		}
+	}
+	
+	.chart {
+		width: 27.2rem;
+		height: 27.2rem;
+		position: absolute;
+		@include transition(top 0.8s linear); 
+	}
+
+	.chart1 {
+		background: no-repeat center url("../images/chart-1.png");
+		// top: 11rem;
+		top: 16rem;
+		left: 4rem;
+	}
+
+	.chart1.move-chart {
+		top: 11rem;
+	}
+
+	.chart2 {
+		background: no-repeat center url("../images/chart-2.png");
+		// top: 29.4rem;
+		top: 34rem;
+		left: 34.7rem;
+	}
+
+	.chart2.move-chart {
+		top: 29.4rem;
+	}
+
+	.chart3 {
+		background: no-repeat center url("../images/chart-3.png");
+		// top: 47rem;
+		top: 52rem;
+		left: 4rem;
+	}
+
+	.chart3.move-chart {
+		top: 47rem;
+	}
+
+	.chart-number {
+		font-size: 4.8rem;
+		font-weight: 700;
+		text-align: center;
+		padding-bottom: 0.8rem;
+		@include pad(10.8rem 0 0.8rem 0);
+	}
+
+	.chart-category {
+		text-transform: uppercase;
+		text-align: center;
 	}
 
 	.numbers-copy-wrapper {
 		@include span-columns(6);
+		@include shift(6);
+		@include media($md) {
+			@include span-columns(12);
+			@include shift(0);
+		}
 	}
 
 	.numbers-copy {
 		@include span-columns(4 of 6);
 		@include shift(1);
+		@include media($md) {
+			@include span-columns(10 of 12)
+			@include shift(1);
+		}
 
 		h2 {
 			margin: 9.3rem 0 1.6rem 0;
@@ -93,6 +180,59 @@ header {
 		.rule {
 			border-color: $white;
 		}
+
+	}
+
+	.numbers-charts-wrapper-md {
+		@include media($lg) {
+			display: none;
+		}
+		.chart-md {
+			@include span-columns(4);
+			height: 27.2rem;
+			@include media($sm) {
+				height: 10em;
+			}
+		}
+		.chart-number {
+			font-size: 3.8rem;
+			font-weight: 700;
+			text-align: center;
+			padding-bottom: 0.8rem;
+			@include pad(10.5rem 0 0.5rem 0);
+			margin-bottom: 0;
+
+			@include media($sm) {
+				@include pad(1rem 0 0 0);
+			}
+		}
+
+		.chart-category {
+			font-size: 2rem;
+			line-height: 3rem;
+		}
+
+		.chart1-md {
+			background: no-repeat center url("../images/chart-1-md.png");
+			@include media($sm) {
+				background: none;
+			}
+		}
+
+		.chart2-md {
+			background: no-repeat center url("../images/chart-2-md.png");
+			@include media($sm) {
+				background: none;
+			}
+		}
+
+		.chart3-md {
+			background: no-repeat center url("../images/chart-3-md.png");
+			@include media($sm) {
+				background: none;
+			}
+		}
+
 
 	}
 }
@@ -110,12 +250,19 @@ header {
 
 	.col1 {
 		@include span-columns(6);
-		background: no-repeat top center/contain url("../images/card-1.jpg");
+		background: no-repeat top center url("../images/card-1.jpg");
+		@include media($md) {
+			@include span-columns(12);
+		}
 
 		.content {
 			@include span-columns(5 of 6);
 			@include shift(1);
 			@include pad(56.6rem 0 0 0);
+			@include media($md) {
+				@include span-columns(8 of 12);
+				@include shift(2);
+			}
 		}
 
 		h2 {
@@ -125,6 +272,9 @@ header {
 
 		p {
 			max-width: 41rem;
+			@include media($md) {
+				max-width: 100%;
+			}
 		}
 
 		button {
@@ -149,15 +299,36 @@ header {
 
 	.col2 {
 		@include span-columns(3);
+		@include media($md) {
+			@include span-columns(6);
+		}
+		@include media($sm) {
+			@include span-columns(12);
+		}
 	}
 
 	.col3 {
 		@include span-columns(3);
 		@include omega;
+		@include media($md) {
+			@include span-columns(6);
+		}
+		@include media($sm) {
+			@include span-columns(12);
+		}
 	}
 
 	.col1, .col2, .col3 {
 		margin-top: -3.5rem;
+		@include media($md) {
+			margin-top: 3.5rem;
+		}
+	}
+
+	.col2, .col3 {
+		@include media($md) {
+			margin-top: 5.5rem;
+		}
 	}
 
 	.card-surf {
@@ -176,6 +347,17 @@ header {
 		background: no-repeat center 4.5rem url("../images/card-4-icon.png") #33363e;
 		height: 29.2rem;
 
+		@include media($md) {
+			height: 50.6rem;
+			background: no-repeat center 4.5rem url("../images/card-4-icon-md.png") #33363e;
+			text-transform: none;
+		}
+
+		@include media($sm) {
+			height: 40rem;
+			background: no-repeat center 2.5rem url("../images/card-4-icon-md.png") #33363e;
+		}
+
 		p {
 			width: 15rem;
 			font-size: 1.4rem;
@@ -184,6 +366,19 @@ header {
 			margin: 0 auto;
 			text-align: center;
 			padding-top: 22.6rem;
+
+			@include media($md) {
+				font-size: 3.5rem;
+				width: 30rem;
+				height: 100%;
+				line-height: 4.2rem;
+				font-weight: 300;
+				padding-top: 32rem;
+			}
+
+			@include media($sm) {
+				padding-top: 29.5rem;
+			}
 		}
 	}
 
@@ -192,6 +387,10 @@ header {
 		position: relative;
 
 		@include background(linear-gradient(20deg, #2bc6d2 0%, #0cefb9 75%, #03fcb2 100%));
+
+		@include media($sm) {
+			height: 40rem;
+		}
 
 		p {
 			font-size: 4.8rem;
@@ -206,6 +405,10 @@ header {
 			top: 28.6rem;
 			left: 50%;
 			transform: translate(-50%, 0);
+
+			@include media($sm) {
+				top: 18.6rem;
+			}
 		}
 	}
 }
@@ -224,6 +427,10 @@ footer {
 		@include shift(4);
 		height: 8rem;
 		background: no-repeat center 4.5rem url("../images/eventbrite_wordmark_white.png");
+		@include media($sm) {
+			@include span-columns(8);
+			@include shift(2);
+		}
 	}
 
 	p {

@@ -67,6 +67,20 @@ nav {
 	p {
 		padding-left: 2rem;
 	}
+
+	&.show-sm {
+		@include media($sm) {
+			display: block;
+		}
+			display: none;
+	}
+
+	&.hide-sm {
+		@include media($sm) {
+			display: none;
+		}
+		display: block;
+	}
 }
 
 .card-heading {
@@ -80,9 +94,33 @@ nav {
 	font-weight: 600;
 	text-transform: uppercase;
 	color: $body-grey;
+
+	@include media($md) {
+		line-height: 3rem;
+	}
 }
 
 .card-image {
 	height: 19.7rem;
 	background-size: cover;
+
+	@include media($sm) {
+		height: 40rem;
+	}
+}
+
+// Animations
+.animate-card {
+	opacity: 0;
+	@include transition(opacity 2.1s ease-in-out, transform 0.3s linear, box-shadow 0.4s ease-in);
+	transform: scale(1);
+}
+
+.animate-card.in-view {
+	opacity: 1;
+}
+
+.animate-card:hover {
+	transform: scale(1.009);
+	box-shadow: 0px 1rem 6rem rgba(0, 0, 0, 0.35);
 }

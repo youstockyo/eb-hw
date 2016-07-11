@@ -4,14 +4,17 @@ var gulp = require("gulp"),
 		browserSync = require("browser-sync"),
 		sass = require("gulp-sass"),
 		bourbon = require("node-bourbon").includePaths,
-		neat = require("node-neat").includePaths;
+		neat = require("node-neat").includePaths,
+		uglify = require("gulp-uglify"),
+		concat = require("gulp-concat");
 
 // Compiles all gulp tasks
-gulp.task("default", ["sass"]);
+gulp.task("default", ["sass", "js"]);
 
 // Live reload anytime a file changes
-gulp.task("watch", ["browserSync", "sass"], function() {
+gulp.task("watch", ["browserSync", "sass", "js"], function() {
 	gulp.watch("src/scss/**/*.scss", ["sass"]);
+	gulp.watch("src/js/*.js", ["js"]);
 	gulp.watch("dist/*.html").on("change", browserSync.reload);
 });
 
@@ -35,4 +38,15 @@ gulp.task("sass", function() {
 			.pipe(browserSync.reload({
 				stream: true
 			}))
+});
+
+// Compile JS files
+gulp.task("js", function() {
+	gulp.src("src/js/*.js")
+			.pipe(uglify())
+			.pipe(concat("main.js"))
+			.pipe(gulp.dest("dist/scripts/"))
+			.pipe(browserSync.reload({
+					stream: true
+				}))
 });
