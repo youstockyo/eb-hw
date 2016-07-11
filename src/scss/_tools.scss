@@ -1,0 +1,32 @@
+$em-base: 10px;
+
+// Colors
+$white: #fff;
+
+$nav-border: #b2b2b2;
+$nav-grey: #3d3f41;
+$nav-blue: #39c2c8;
+
+$text-grey: #3c3c3c;
+$body-light-grey: #f8f9ff;
+$body-grey: #929499;
+$body-medium-grey: #d7dae3;
+$body-blue-grey: #282c35;
+$body-dark-grey: #43464c;
+$bg-grey: #f8f9ff;
+$card-blue-grey: #33363e;
+
+@mixin centerme($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}

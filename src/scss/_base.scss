@@ -1,0 +1,48 @@
+html, body {
+	font-size: 10px;
+}
+
+body {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+h1 {
+	margin: 0;
+
+	font-size: 7.2rem;
+}
+
+h2 {
+	font-size: 4.8rem;
+}
+
+h1, h2 {
+	margin: 0;
+
+	font-weight: 100;
+	line-height: 8.4rem;
+}
+
+p {
+	margin: 0;
+
+	font-size: 2.4rem;
+	font-weight: 300;
+	line-height: 3rem;
+
+	@include media($md) {
+		line-height: 4rem;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+footer {
+	font-size: 1.8rem;
+	font-weight: 300;
+
+	background: $body-medium-grey;
+}

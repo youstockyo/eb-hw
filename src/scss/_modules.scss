@@ -1,0 +1,163 @@
+/***************
+	Navigation
+****************/
+nav {
+	height: 10.1rem;
+	top: 0;
+	z-index: 100;
+	margin-bottom: -10.1rem;
+	width: 100%;
+	position: fixed;
+
+	background: $white;
+
+	border-bottom: 0.1rem solid $nav-border;
+
+	@include media($sm) {
+		height: 11.7rem;
+	}
+
+	&.sticky {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		float: right;
+
+		list-style: none;
+		text-transform: uppercase;
+
+		@include media($sm) {
+			float: left;
+			overflow: hidden;
+			margin: 2rem auto 0 auto;
+			width: 98%;
+		}
+	}
+
+	li {
+		display: inline-block;
+		padding: 3.9rem 3rem 3.8rem 3rem;
+
+		font-size: 2rem;
+		font-weight: 300;
+		letter-spacing: 0.25rem;
+
+		color: $nav-grey;
+
+		@include media($sm) {
+			width: 33.333%;
+			width: calc(100%/3);
+			// width: 100%;
+			@include pad(1.2rem 0 1.2rem 0);
+			float: left;
+			text-align: center;
+			display: block;
+			background: $white;
+		}
+	}
+
+	.create {
+		padding-left: 5rem;
+		padding-right: 5rem;
+		background: $nav-blue;
+		color: $white;
+
+		@include media($sm) {
+			@include pad(1.2rem 0 1.2rem 0);
+			// background: $white;
+			// color: $nav-blue;
+			// font-weight: 600;
+			border-radius: 1rem;
+		}
+	}
+	
+	@include media(min-width 755px) {
+		#menu {
+			display: none;
+		}
+	}
+
+}
+
+/***************
+	Rule
+****************/
+.rule {
+	width: 7.9rem;
+	border-top: 2px solid #000;
+	margin-bottom: 3.6rem;
+}
+
+/***************
+	Cards
+****************/
+.card-activity {
+	background: $white;
+	@include pad(0 0 1.7rem 0);
+	margin-bottom: 3.7rem;
+
+	p {
+		padding-left: 2rem;
+	}
+
+	&.show-sm {
+		@include media($sm) {
+			display: block;
+		}
+			display: none;
+	}
+
+	&.hide-sm {
+		@include media($sm) {
+			display: none;
+		}
+		display: block;
+	}
+}
+
+.card-heading {
+	font-size: 3.2rem;
+	font-weight: 300;
+	@include pad(1.9rem 0 0.2rem 0);
+}
+
+.card-category {
+	font-size: 1.4rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $body-grey;
+
+	@include media($md) {
+		line-height: 3rem;
+	}
+}
+
+.card-image {
+	height: 19.7rem;
+	background-size: cover;
+
+	@include media($sm) {
+		height: 40rem;
+	}
+}
+
+// Animations
+.animate-card {
+	opacity: 0;
+	@include transition(opacity 2.1s ease-in-out, transform 0.3s linear, box-shadow 0.4s ease-in);
+	transform: scale(1);
+}
+
+.animate-card.in-view {
+	opacity: 1;
+}
+
+.animate-card:hover {
+	transform: scale(1.009);
+	box-shadow: 0px 1rem 6rem rgba(0, 0, 0, 0.35);
+}
